@@ -26,6 +26,8 @@ vim.opt.tabstop = 2                             -- insert 2 spaces for a tab
 vim.opt.cursorline = true                       -- highlight the current line
 vim.opt.number = true                           -- set numbered lines
 vim.opt.relativenumber = true                   -- set relative numbered lines
+vim.opt.joinspaces = false                      -- don't join spaces into tabs
+vim.opt.gdefault = true                         -- use /g by default
 vim.opt.laststatus = 3
 vim.opt.showcmd = false
 vim.opt.ruler = false
@@ -39,3 +41,12 @@ vim.opt.fillchars.eob=" "
 vim.opt.shortmess:append "c"
 vim.opt.whichwrap:append("<,>,[,],h,l")
 vim.opt.iskeyword:append("-")
+
+vim.cmd [[
+if exists("g:neovide") 
+  let g:neovide_refresh_rate=120
+  let g:neovide_fullscreen=v:true
+  let g:neovide_cursor_animation_length=0.07
+  let g:neovide_cursor_tail_length=0.1
+endif
+]]
