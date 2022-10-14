@@ -1,5 +1,4 @@
 vim.opt.backup = false                          -- creates a backup file
-vim.opt.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
 vim.opt.cmdheight = 1                           -- more space in the neovim command line for displaying messages
 vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 vim.opt.conceallevel = 0                        -- so that `` is visible in markdown files
@@ -36,17 +35,20 @@ vim.opt.signcolumn = "yes"                      -- always show the sign column, 
 vim.opt.wrap = false                            -- display lines as one long line
 vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
-vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
+vim.opt.guifont = "Fira Code:h16"               -- the font used in graphical neovim applications
 vim.opt.fillchars.eob=" "
 vim.opt.shortmess:append "c"
 vim.opt.whichwrap:append("<,>,[,],h,l")
 vim.opt.iskeyword:append("-")
+vim.opt_global.shortmess:remove("F")
 
 vim.cmd [[
 if exists("g:neovide") 
   let g:neovide_refresh_rate=120
-  let g:neovide_fullscreen=v:true
+  let g:neovide_fullscreen=v:false
+  let g:neovide_remember_window_size=v:true
   let g:neovide_cursor_animation_length=0.07
   let g:neovide_cursor_tail_length=0.1
+  set clipboard^=unnamed,unnamedplus
 endif
 ]]

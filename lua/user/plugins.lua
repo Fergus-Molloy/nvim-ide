@@ -77,6 +77,7 @@ return packer.startup(function(use)
   use { "jose-elias-alvarez/null-ls.nvim"} -- for formatters and linters
   use { "RRethy/vim-illuminate"} -- highlight things i'm on
   use { "simrat39/rust-tools.nvim" } -- rust support
+  use { "MunifTanjim/eslint.nvim" }
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim"} -- fuzzy finder

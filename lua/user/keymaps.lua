@@ -15,6 +15,11 @@ vim.g.mapleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
+keymap("n", "q", "h", {silent=true})
+keymap("n", "x", "l", {silent=true})
+keymap("v", "x", "l", {silent=true})
+keymap("v", "x", "l", {silent=true})
+
 -- Normal --
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -44,11 +49,6 @@ keymap("n", "<S-l>", "$", opts)
 keymap("n", "<S-h>", "^", opts)
 keymap("n", "j", "gj", opts)
 keymap("n", "k", "gk", opts)
-
--- cut means destroy
-keymap("n", "x", "\"_x", opts)
-keymap("v", "x", "\"_x", opts)
-keymap("x", "x", "\"_x", opts)
 
 -- Clear highlights
 keymap("n", "<c-h>", "<cmd>nohlsearch<CR>", opts)
